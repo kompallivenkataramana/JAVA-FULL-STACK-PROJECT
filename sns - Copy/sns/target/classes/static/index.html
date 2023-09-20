@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>chat room</title>
+<link rel="stylesheet" href="\css\main.css">
+</head>
+<body>
+	<noscript>
+    <h2>Sorry! Your browser doesn't support Javascript</h2>
+    </noscript>
+    <div id="Logo"><img src="room.png" alt="Logo">
+    </div>
+    <div id="login-page">
+        <div class="login-page-container">
+            <h1 class="title">LOGIN</h1>
+            <form name="loginForm" id="loginForm">
+                <div class="items-container">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                </div>
+                <div class="items-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+                </div>
+                <div class="items-container">
+                    <br>
+                    <button id="login-button1" type="submit">Login</button>
+                    <p style="color:black;">Don't have an account ?<a href="#" id="newRegister" style="color: blue;">Register Here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="registration-page" class="hidden">
+        <div class="registration-page-container">
+            <form name="registrationForm" id="registrationForm">
+                <h2 style="color:rgb(14, 0, 0)"> Register with your credentials : </h2><br>
+            <label for="fullname">Full Name :</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+            <br>
+            
+            <label for="email">Email id :</label>
+            <input type="email" id="email" name="email" placeholder="company@gmail.com" required>
+            <br>
+
+            <label for="rusername">User Name :</label>
+            <input type="text" id="rusername" name="rusername" placeholder="create a user name" required><br>
+
+            <label for="rpassword">Password :</label>
+            <input type="password" id="rpassword" name="rpassword" placeholder="create a password" required><br>
+            <br>
+            <button id="register-button1" type="submit" value="submit">Register</button>
+            </form>
+            
+        </div>
+    </div>
+    <div id="chat-page" class="hidden">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Welcome To Our ChatRoom</h2>
+            </div>
+            <div class="connecting">
+                Connecting...
+            </div>
+            <ul id="messageArea">
+
+            </ul>
+            <form id="messageForm" name="messageForm">
+                <div class="form-group">
+                    <div class="input-group clearfix">
+                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                        <button type="submit" class="primary">Send</button>
+                        <button id="logoutButton">Logout</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+
+</html>
